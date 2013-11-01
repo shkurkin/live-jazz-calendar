@@ -30,5 +30,7 @@ class Event < ActiveRecord::Base
   validates :performers, length: { maximum: 255 }
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :contact_email, format: { with: VALID_EMAIL_REGEX }
 
 end

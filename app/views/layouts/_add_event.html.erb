@@ -1,0 +1,49 @@
+<%= form_for(@event) do |f| %>
+
+<div class="form-group">
+  <%= render 'shared/error_messages' %>
+
+  <%= f.label :event_name %>
+  <%= f.text_field :event_name, class: "form-control" %>
+
+  <%= f.label :performers %>
+  <%= f.text_field :performers, class: "form-control"  %>
+
+  <%= f.label :venue %>
+  <%= f.text_field :venue, class: "form-control"  %>
+
+  <%= f.label :address %>
+  <%= f.text_area :address, rows: "2", class: "form-control"  %>
+
+  <%= f.label :date_time %>
+  <%= f.date_select :date_time, class: "form-control" %>
+
+  <%= f.label :repeat_info %>
+  <%= f.text_field :repeat_info, class: "form-control"  %>
+
+  <%= f.label :cost %>
+  <%= f.text_field :cost, class: "form-control"  %>
+
+  <%= f.label :details %>
+  <%= f.text_area :details, rows: "3", class: "form-control"  %>
+
+  <%= f.label :picture_url %>
+  <%= f.text_field :picture_url, class: "form-control"  %>
+
+  <%= f.label :contact_phone %>
+  <%= f.text_field :contact_phone, class: "form-control"  %>
+
+  <%= f.label :contact_email %>
+  <%= f.text_field :contact_email, class: "form-control"  %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control"  %>
+
+  <%= f.label :password_confirmation, "Password Confirmation" %>
+  <%= f.password_field :password_confirmation, class: "form-control"  %>
+
+  <%= f.submit "Submit Event", class: "btn btn-large btn-primary" %>
+
+</div>
+
+<% end %>
