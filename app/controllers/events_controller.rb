@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   def index
     @event = Event.new
+    @events = Event.all
+    @events_by_date = @events.group_by(&:date_time)
   end
 
   def create
@@ -10,6 +12,12 @@ class EventsController < ApplicationController
     else
       render 'index'
     end
+  end
+
+  def destroy
+    Event.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to root_url
   end
 
   def show
