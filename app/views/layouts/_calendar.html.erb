@@ -1,6 +1,7 @@
 <br/>
 <div id="main_calendar">
-  <%= calendar do |date| %>
+  <%= @events_by_date %>
+<!--   <%= calendar do |date| %>
     <%= date.day %>
     <% if @events_by_date[date] %>
     <ul>
@@ -10,4 +11,4 @@
     </ul>
     <% end %>
   <% end %>
-</div>
+ --></div>
