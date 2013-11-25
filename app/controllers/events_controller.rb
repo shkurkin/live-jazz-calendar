@@ -7,6 +7,8 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(params[:event])
+    @events = Event.all
+    @events_by_date = @events.group_by(&:date_time)
     if @event.save
       redirect_to @event
     else
