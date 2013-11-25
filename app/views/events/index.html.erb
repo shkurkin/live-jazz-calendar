@@ -5,12 +5,23 @@
 </head>
 <body>
 	<div class="row top-spaced">
-        <div class="col-md-3">
-          <%= render "layouts/add_event" %> 
-        </div>
-        <div class="col-md-9"> 
+    <div class="col-md-3">
+      <%= render "layouts/add_event" %> 
+    </div>
+    <div class="col-md-9"> 
+      <ul class="nav nav-tabs" id="myTab">
+        <li class="active"><a href="#calendar">Calendar</a></li>
+        <li><a href="#list">List</a></li>
+      </ul>
+      <div id="content" class="tab-content">
+        <div class="tab-pane fade in active" id="calendar">
           <%= render "layouts/calendar" %>
         </div>
+        <div class="tab-pane fade" id="list">
+          <%= render "layouts/list" %>
+        </div>
       </div>
+    </div>
+  </div>
 </body>
 </html>
