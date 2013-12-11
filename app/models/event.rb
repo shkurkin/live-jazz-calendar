@@ -21,7 +21,7 @@
 class Event < ActiveRecord::Base
   attr_accessible :address, :contact_email, :contact_phone, :cost,
   :date_time, :details, :event_name, :performers, :picture_url,
-  :repeat_info, :venue, :password, :password_confirmation
+  :repeat_info, :venue, :password, :password_confirmation, :time
   has_secure_password
 
   validates :event_name, presence: true, length: { maximum: 80 }

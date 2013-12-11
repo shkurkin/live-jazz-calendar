@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131123161023) do
+ActiveRecord::Schema.define(:version => 20131211021230) do
 
   create_table "events", :force => true do |t|
     t.string   "event_name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20131123161023) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
+    t.string   "time"
   end
 
   add_index "events", ["date_time"], :name => "index_events_on_date_time"
