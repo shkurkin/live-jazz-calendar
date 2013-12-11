@@ -1,0 +1,11 @@
+<% @events_by_date.each do |date| %>
+  <% if date[0] >= @date %>
+    <%= date[0] %>
+    <br />
+    <% date[1].each do |event| %>
+      <ul>
+        <li><%= link_to event.event_name, event %></li>
+      </ul>
+    <% end %>
+  <% end %>
+<% end %>
