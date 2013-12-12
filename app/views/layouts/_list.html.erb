@@ -1,6 +1,8 @@
 <% @events_by_date.each do |date| %>
   <% if date[0] >= @date %>
     <%= date[0] %>
+    <%= date[1] %>
+    <%=  %>
     <br />
     <% date[1].each do |event| %>
       <ul>
