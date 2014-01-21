@@ -1,3 +1,5 @@
+require 'ice_cube'
+
 class EventsController < ApplicationController
   def index
     @event = Event.new
@@ -11,6 +13,9 @@ class EventsController < ApplicationController
     @events = Event.all
     @events_by_date = @events.group_by(&:date_time)
     @date = Date.today
+    @s = IceCube::Schedule.new(now = Time.now)
+    @r = @s.add_recurrence_rule IceCube::Rule.weekly
+    @weekly = @s.first(5)
     if @event.save
       redirect_to @event
     else

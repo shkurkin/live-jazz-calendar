@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.14'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'ice_cube', '~> 0.11.1'
+gem 'bootstrap-datetimepicker-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

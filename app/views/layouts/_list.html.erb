@@ -1,13 +1,19 @@
+<h3>This is the schedule</h3><br>
+<%= @s %>
+<br>
+<h3>This is the recurrance rule</h3>
+<%= @r %>
+<br>
+<h3>This is the weekly</h3><br>
+<%= @weekly %>
+<br>
 <% @events_by_date.each do |date| %>
-  <% if date[0] >= @date %>
-    <%= date[0] %>
-    <%= date[1] %>
-    <%=  %>
-    <br />
-    <% date[1].each do |event| %>
-      <ul>
-        <li><%= link_to event.event_name, event %></li>
-      </ul>
-    <% end %>
-  <% end %>
+<% if date[0] >= @date %>
+<br />
+<% date[1].each do |event| %>
+<ul>
+  <li><%= link_to event.event_name, event %> - <%= date[0] %></li>
+</ul>
+<% end %>
+<% end %>
 <% end %>
